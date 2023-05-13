@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@200;400;600&family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #abbaab; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ffffff,
+    #abbaab
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #abbaab
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.mobile-container {
+  width: 400px;
+  background-color: #fff;
+  box-shadow: 0 0 10px 2px #3333331a;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+header input {
+  background-color: #eee;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-family: inherit;
+}
+
+header button {
+  background-color: transparent;
+  border: none;
+  color: #aaa;
+  font-size: 1.5rem;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.fav-container {
+  padding: 0.5rem;
+  text-align: center;
+  font-size: bold;
+  background: #f0ffff;
+}
+
+.fav-meals {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.fav-meals li {
+  cursor: pointer;
+  position: relative;
+  width: 100px;
+  margin-bottom: 0;
+  margin-top: 0.5rem;
+}
+
+.fav-meals li .clear {
+  border: none;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1rem;
+  border-radius: 3px;
+}
+
+.fav-meals li:hover .clear {
+  opacity: 1;
+  cursor: pointer;
+  background-color: gray;
+  color: #fff;
+}
+
+.fav-meals li img {
+  border: 2px solid rgb(212, 224, 229);
+  max-width: 70px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.fav-meals li span {
+  display: inline-block;
+  font-size: 0.8rem;
+  line-height: 1.3;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 75px;
+}
+
+.meal {
+  border-radius: 3px;
+  box-shadow: 0 0 10px 2px #5555551a;
+  margin: 0.7rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.meal-header {
+  position: relative;
+}
+
+.meal-header .random {
+  position: absolute;
+  top: 8px;
+  font-weight: bold;
+  left: 8px;
+  background-color: #eee;
+  padding: 0.25rem 0.5rem;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.meal-header img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.meal-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.meal-body {
+  margin: 0;
+}
+
+.meal-body .fav-btn {
+  border: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  color: gray;
+  cursor: pointer;
+}
+
+.meal-body .fav-btn.active {
+  color: rebeccapurple;
+}
+
+.popup-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.popup-container.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.popup {
+  position: relative;
+  background-color: #fff;
+  max-width: 600px;
+  max-height: 100vh;
+  overflow: auto;
+  text-align: justify;
+  padding: 0 2rem;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.popup .close-popup {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.meal-info h1 {
+  text-align: center;
+}
